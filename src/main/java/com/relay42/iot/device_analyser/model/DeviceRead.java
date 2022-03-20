@@ -1,9 +1,11 @@
-package com.relay42.iot.device_analyser.iot;
+package com.relay42.iot.device_analyser.model;
 
 
 import org.springframework.data.cassandra.core.mapping.PrimaryKey;
+import org.springframework.data.cassandra.core.mapping.Table;
 
 
+@Table("device_read")
 public class DeviceRead {
 
     private DeviceRead(){}
