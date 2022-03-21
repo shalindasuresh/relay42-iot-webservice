@@ -9,7 +9,7 @@ Restful webservice for simulate readings from iot devices
 ###Docker
 
 
-### Booting web service
+### Start the web service
 
 
 1. Install dependencies
@@ -17,11 +17,18 @@ Restful webservice for simulate readings from iot devices
 ````bash
 mvn clean install
 ````
-   
-   
-2. Run the application
+
+2. Run Test cases
+
+````bash
+mvn test -Dtest=DeviceAnalyzerApplicationTests
+````
+3. Run the application
 
 ````bash
 mvn spring-boot:run
 ````
 
+4. Access Rest API documentation at
+
+http://localhost:8000/openapi/swagger-ui/index.html

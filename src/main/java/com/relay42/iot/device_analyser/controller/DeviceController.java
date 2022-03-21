@@ -25,7 +25,24 @@ class DeviceController {
 
         try {
 
-            DeviceRead deviceRead = deviceReadService.queryDeviceReadingByType(request.getType(),request.getTimeFrom(),request.getTimeTo());
+            DeviceRead deviceRead = deviceReadService.queryDeviceReadingByType(request.getType(),request.getFunction(),request.getTimeFrom(),request.getTimeTo());
+
+            return deviceRead;
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+
+        return null;
+    }
+
+
+    @PostMapping("/devices/query/name")
+    public DeviceRead queryDeviceReadingByName(@Valid @RequestBody DeviceReadingRequest request) {
+
+
+        try {
+
+            DeviceRead deviceRead = deviceReadService.queryDeviceReadingByName(request.getType(),request.getFunction(),request.getTimeFrom(),request.getTimeTo());
 
             return deviceRead;
         } catch (Exception e) {
