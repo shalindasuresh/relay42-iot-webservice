@@ -38,5 +38,8 @@ mvn spring-boot:run
 
 4. Access Rest API documentation at
 
+username : api_user
+password : User@123
+
 http://localhost:8000/openapi/swagger-ui/index.html
 
