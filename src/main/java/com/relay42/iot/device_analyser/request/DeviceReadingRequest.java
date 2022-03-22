@@ -7,10 +7,8 @@ import javax.validation.constraints.NotEmpty;
 public class DeviceReadingRequest {
 
 
-//    @NotEmpty(message = "Device Type cannot be empty")
     private String type;
 
-//    @NotEmpty(message = "Device Name cannot be empty")
     private String name;
 
 
