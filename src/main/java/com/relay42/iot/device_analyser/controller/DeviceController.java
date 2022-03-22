@@ -43,7 +43,7 @@ class DeviceController {
 
         try {
 
-            DeviceRead deviceRead = deviceReadService.queryDeviceReadingByName(request.getType(),request.getFunction(),request.getTimeFrom(),request.getTimeTo());
+            DeviceRead deviceRead = deviceReadService.queryDeviceReadingByName(request.getName(),request.getFunction(),request.getTimeFrom(),request.getTimeTo());
 
             return deviceRead;
         } catch (Exception e) {
