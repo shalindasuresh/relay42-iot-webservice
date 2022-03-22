@@ -1,15 +1,22 @@
+
 # Relay42 IOT Device Webservice
 
 Restful webservice for simulate readings from iot devices
 
 
-## Technologies
-###Springboot
-###Cassandra
-###Docker
+![Logo](https://www.pngkey.com/png/detail/189-1890854_coo-relay42-transparent-logo.png)
 
 
-### Start the web service
+#  Relay42 IOT Device Webservice
+
+The solution is java spring boot based restful Webservice allowing clients to query the device data coming through pipeline.
+
+
+## Technical Diagram
+
+![Pipeline](https://shalindarelay42.s3.amazonaws.com/Untitled+Diagram.drawio+(3).png)
+## Run Locally
+
 
 
 1. Install dependencies
@@ -32,3 +39,4 @@ mvn spring-boot:run
 4. Access Rest API documentation at
 
 http://localhost:8000/openapi/swagger-ui/index.html
+
