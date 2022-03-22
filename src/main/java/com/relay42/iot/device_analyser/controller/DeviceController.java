@@ -25,6 +25,7 @@ class DeviceController {
 
         try {
 
+
             DeviceRead deviceRead = deviceReadService.queryDeviceReadingByType(request.getType(),request.getFunction(),request.getTimeFrom(),request.getTimeTo());
 
             return deviceRead;

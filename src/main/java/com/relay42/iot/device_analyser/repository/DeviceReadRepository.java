@@ -20,13 +20,13 @@ public interface DeviceReadRepository extends CrudRepository<DeviceRead, UUID> {
     DeviceRead findMinValueByDeviceType( @Param("device_type")  String type,@Param("time_from") String timeFrom,@Param("time_to") String timeTo);
 
     @AllowFiltering
-    @Query("SELECT MAX(value) as value,name FROM device_read WHERE type=:device_type AND timestamp >=:time_from AND timestamp <=:time_to")
+    @Query("SELECT MAX(value) as value FROM device_read WHERE type=:device_type AND timestamp >=:time_from AND timestamp <=:time_to")
     DeviceRead findMaxValueByDeviceType( @Param("device_type")  String type,@Param("time_from") String timeFrom,@Param("time_to") String timeTo);
 
 
 
     @AllowFiltering
-    @Query("SELECT AVG(value) as value,name FROM device_read WHERE name=:device_name AND timestamp >=:time_from AND timestamp <=:time_to")
+    @Query(value = "SELECT AVG(value) as value FROM device_read WHERE name=:device_name AND timestamp >=:time_from AND timestamp <=:time_to")
     DeviceRead findAverageByDeviceName( @Param("device_name")  String name,@Param("time_from") String timeFrom,@Param("time_to") String timeTo);
 
     @AllowFiltering
